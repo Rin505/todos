@@ -41,7 +41,7 @@ Meteor.methods({
       // if the task is private, make sure only the owner can delete it
       throw new Meteor.Error('non-authorized');
     }
-
+     
     Tasks.remove(taskId);
   },
   'tasks.setChecked'(taskId, setChecked) {
